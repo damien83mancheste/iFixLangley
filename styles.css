@@ -90,6 +90,8 @@ html, body {
 @media (max-width: 768px) {
     .sidebar {
         width: 200px;
+		min-width: 200px; 
+		font-size: min(16px, 1vw)
     }
 
     .main-container {
