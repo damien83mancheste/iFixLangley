@@ -128,15 +128,28 @@ html, body {
     }
 }
 
-@media (min-width: 1024px) {
-    .box {
-        width: 30vw; 
-        text-align: center;
-        padding: 15px;
-        display: inline-block;
-        background-color: #0078D4; 
-        color: white;
-        border-radius: 5px;
-        margin: 10px;
+@media (max-width: 1024px) {
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+    .topbar .box {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .main-container {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .flexbox {
+        width: 100%;
+        margin-left: 0;
+        padding: 5%;
     }
 }
