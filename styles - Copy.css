@@ -2,15 +2,16 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f7;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    color: #1c1c1e; /* Darker text */
+    background-color: #fefaf2;
+    font-family: Merriweather, serif;
+    color: #333;
 }
+
 
 .sidebar {
     width: 250px;
-    background-color: #ffffff;
-    color: #1c1c1e;
+    background-color: #1a1a1a;
+    color: #fff;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -18,82 +19,82 @@ html, body {
     padding-top: 20px;
     z-index: 10;
     transition: width 0.3s ease;
-    overflow-y: auto;
-    border-right: 1px solid #d1d1d6;
+	overflow-y: auto;	
 }
 
 .sidebar .box {
     padding: 12px;
     margin: 10px;
-    background-color: #f2f2f7;
-    color: #1c1c1e;
+    background-color: #333;
+    color: white;
     text-align: center;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    font-size: 16px;
+	font-size: 16px;
 }
 
 .sidebar .box:hover {
-    background-color: #e5e5ea;
+    background-color: #555;
+	color: white;
 }
 
 .sidebar a {
     text-decoration: none;
-    color: inherit;
+	color: inherit;
 }
 
+
 .topbar {
-    background-color: #f2f2f7;
-    color: #1c1c1e;
+    background-color: #005f7a;
+	color: white;
     padding: 12px;
     text-align: center;
     position: relative;
     z-index: 5;
-    border-bottom: 1px solid #d1d1d6;
 }
 
 .topbar .box {
     display: inline-block;
     margin: 5px 15px;
     padding: 10px;
-    background-color: #ffffff;
-    color: #1c1c1e;
+    background-color: #222;
+    color: white;
     border-radius: 5px;
-    border: 1px solid #d1d1d6;
 }
 
 .main-container {
-    margin-left: 260px;
+    margin-left: 260px; 
     padding: 20px;
 }
 
+
 .flexbox {
-    background-color: #ffffff;
+    background-color: #b0e0e6;
     flex: 1;
     padding: 5%;
-    border: 1px solid #d1d1d6;
+    border: 5px solid #666;
     border-radius: 10px;
     text-align: center;
     min-height: 10%;
     width: 70%;
     margin-left: auto;
-    margin-right: auto;
+	margin-right: auto;
     overflow: auto;
     white-space: normal;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .flexbox:focus {
-    outline: 2px solid #007aff;
+    outline: 2px solid #007b9e;
 }
+
 
 @media (max-width: 768px) {
     .sidebar {
-        width: 200px;
+        width: 200px; 
     }
 
     .main-container {
-        margin-left: 200px;
+        margin-left: 200px; 
         padding: 10px;
     }
 
@@ -105,18 +106,18 @@ html, body {
 
 @media (max-width: 480px) {
     .sidebar {
-        width: 100%;
-        height: auto;
+        width: 100%; 
+		height: auto;
         position: relative;
-        padding-bottom: 10px;
+		padding-bottom: 10px;
     }
 
     .topbar .box {
         display: block;
         margin: 10px 0;
     }
-
-    .main-container {
+	
+	 .main-container {
         margin-left: 0;
         padding: 10px;
     }
