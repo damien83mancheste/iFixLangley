@@ -40,8 +40,7 @@ html, body {
 .sidebar a {
     text-decoration: none;
     color: inherit;
-	min-width: 200px; /* Ensure it never gets too small */
-    font-size: clamp(16px, 1vw, 20px);
+	font-size: min(16px, 1vw);
 }
 
 .topbar {
