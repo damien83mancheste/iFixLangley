@@ -5,8 +5,9 @@ html, body {
     background-color: #f5f5f7;
     font-family: Arial, Segoe UI:, sans-serif;
     color: #1c1c1e;
-	min-width: 400px; /* Adjust as needed */
-    overflow-x: hidden; /* Prevent unwanted scrolling */
+	min-width: 400px;
+	max-width: 1024px
+    overflow-x: hidden;
 }
 }
 
