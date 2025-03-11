@@ -93,6 +93,7 @@ html, body {
 		min-width: 200px; 
 		font-size: min(16px, 1vw)
 		min-height: 60px;
+		min-width: 150px;
     }
 
     .main-container {
@@ -113,6 +114,7 @@ html, body {
         position: relative;
         padding-bottom: 10px;
 		min-height: 60px;
+		min-width: 150px;
     }
 
     .topbar .box {
@@ -140,6 +142,7 @@ html, body {
         position: relative;
         padding-bottom: 10px;
 		min-height: 60px;
+		min-width: 150px;
     }
 
     .topbar .box {
