@@ -4,34 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
     <title>FixLangley</title>
-	    <style>
+    <style>
         .topbar {
             background-color: #d7d7e0;
-            padding: 200px 0;
+            padding: 50px 0;
             display: flex;
             justify-content: center;
             gap: 50px;
             font-size: 28px;
+            flex-wrap: wrap;
         }
-
 
         .box {
             display: inline-block;
-            padding: 15px 40px; /* Larger padding for bigger buttons */
-            font-size: 22px; /* Bigger text */
-            border-radius: 10px; /* Rounded edges */
+            padding: 15px 40px;
+            font-size: 22px;
+            border-radius: 10px;
             background-color: #ffffff;
             color: #1c1c1e;
             text-align: center;
             text-decoration: none;
             cursor: pointer;
             transition: all 0.3s ease;
+            border: 1px solid #ccc;
         }
 
         .box:hover {
-            background-color: #0056b3;
+            background-color: #e5e5ea;
         }
-
 
         @media (max-width: 768px) {
             .topbar {
@@ -45,64 +45,27 @@
             }
         }
     </style>
-	
-	
-	
-	
-	
-	
+
     <link rel="stylesheet" type="text/css" href="styles.css">
-	<!-- link to remote axe script that is testing website accessibility -->
-	<script src="https://cdn.jsdelivr.net/npm/axe-core@4.4.0/axe.min.js"></script>
+    <!-- link to remote axe script that is testing website accessibility -->
+    <script src="https://cdn.jsdelivr.net/npm/axe-core@4.4.0/axe.min.js"></script>
 </head>
 <body>
-	<header role="banner" aria-label="Main Header">
-		<div class="topbar">
-			<a href="week2.html"><div class="box">Home Page</div></a>
-			
-			<a href="https://login.microsoftonline.com/common/oauth2/v2.0/authorize?
-client_id=YOUR_CLIENT_ID
-&response_type=token
-&redirect_uri=https://damien83mancheste.github.io/iFixLangley/week3.html
-&scope=openid profile email
-&response_mode=fragment"><div class="box">Microsoft Login</div>
+    <header role="banner" aria-label="Main Header">
+        <div class="topbar">
+            <a href="week2.html" class="box" role="button">Home Page</a>
 
-			</a>
+            <a href="https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=YOUR_CLIENT_ID&response_type=token&redirect_uri=https://damien83mancheste.github.io/iFixLangley/week3.html&scope=openid%20profile%20email&response_mode=fragment"
+               class="box" role="button">Microsoft Login</a>
+        </div>
+    </header>
 
-			
-			
-			
-			
-		</div>
-	</header>
+    <main>
+        <p>Welcome to FixLangley!</p>
+    </main>
 
-
-</main>
     <footer role="contentinfo" aria-label="Footer Section">
         <p>🔬 iFixLangley.</p>
-	</footer>	
-		
-<!-- This is a code I took from AXE website when I was researching for open source methodes that allows me to check website accessibility -->		
-		
-					
-					
-<div id="axeResultsModal" style="display:none; position:fixed; top:10%; left:10%; width:80%; height:80%; background-color:white; border:1px solid black; padding:20px; overflow:auto;">
-  <h2>Accessibility Issues</h2>
-  <pre id="axeResults"></pre>
-  <button onclick="document.getElementById('axeResultsModal').style.display='none'">Close</button>
-</div>
-
-<script>
-document.getElementById("runAxeTest").addEventListener("click", function() {
-  axe.run(function (err, results) {
-    if (err) {
-      console.error("Error running axe-core:", err);
-    } else {
-      let issues = results.violations.map(v => `${v.id}: ${v.description}`).join("\n");
-      document.getElementById("axeResults").textContent = issues;
-      document.getElementById('axeResultsModal').style.display = 'block';
-    }
-  });
-});
-</script>
+    </footer>
+</body>
 </html>
