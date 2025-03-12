@@ -90,6 +90,8 @@ html, body {
     outline: 2px solid #007aff;
 }
 
+
+
 @media (max-width: 768px) {
     .sidebar {
         width: 200px;

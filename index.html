@@ -41,6 +41,24 @@
             background-color: #e5e5ea;
         }
 
+        .image-button {
+            display: block;
+            width: 80%;
+            max-width: 600px;
+            height: 100%;
+            border-radius: 10px;
+            overflow: hidden;  
+            border: 10px solid #ccc;
+            position: relative;
+        }
+
+        .image-button img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            display: block;
+        }
 
         footer {
             position: fixed;
@@ -50,6 +68,7 @@
             color: #1c1c1e;
             font-size: 20px;
             width: auto;
+        }
 
         @media (max-width: 768px) {
             .topbar {
@@ -68,7 +87,9 @@
         <div class="topbar">
             <a href="week2.html" class="box" role="button">Home Page</a>
             <a href="https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=YOUR_CLIENT_ID&response_type=token&redirect_uri=https://damien83mancheste.github.io/iFixLangley/week3.html&scope=openid%20profile%20email&response_mode=fragment"
-               class="box" role="button">Microsoft Login</a>
+               class="image-button">
+                <img src="pictures/microsoft_button.jpg" alt="Microsoft Login">
+            </a>
         </div>
     </header>
 
@@ -76,12 +97,9 @@
         <p>Welcome to FixLangley</p>
     </main>
 
-
-</body>
-
     <footer role="contentinfo" aria-label="Footer Section">
         <p>🔬 iFixLangley.</p>
     </footer>
 
-
+</body>
 </html>
