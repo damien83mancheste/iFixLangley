@@ -4,36 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
     <title>FixLangley</title>
-    <style>
-        /* Enlarge Top Bar */
+	    <style>
         .topbar {
-            background-color: #333;
-            padding: 20px 0; /* Increased padding for height */
+            background-color: #d7d7e0;
+            padding: 200px 0;
             display: flex;
             justify-content: center;
-            gap: 20px; /* Space between buttons */
-            font-size: 22px; /* Larger text */
+            gap: 50px;
+            font-size: 28px;
         }
 
-        /* Enlarge Buttons */
+
         .box {
             display: inline-block;
             padding: 15px 40px; /* Larger padding for bigger buttons */
             font-size: 22px; /* Bigger text */
             border-radius: 10px; /* Rounded edges */
-            background-color: #007bff; /* Button color */
-            color: white;
+            background-color: #ffffff;
+            color: #1c1c1e;
             text-align: center;
             text-decoration: none;
             cursor: pointer;
-            transition: all 0.3s ease; /* Smooth effect */
+            transition: all 0.3s ease;
         }
 
         .box:hover {
-            background-color: #0056b3; /* Darker shade on hover */
+            background-color: #0056b3;
         }
 
-        /* Responsive Scaling */
+
         @media (max-width: 768px) {
             .topbar {
                 font-size: 18px;
@@ -46,43 +45,64 @@
             }
         }
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/axe-core@4.4.0/axe.min.js"></script>
+	
+	
+	
+	
+	
+	
+    <link rel="stylesheet" type="text/css" href="styles.css">
+	<!-- link to remote axe script that is testing website accessibility -->
+	<script src="https://cdn.jsdelivr.net/npm/axe-core@4.4.0/axe.min.js"></script>
 </head>
 <body>
-    <header role="banner" aria-label="Main Header">
-        <div class="topbar">
-            <a href="week2.html" class="box">Home Page</a>
-            <a href="https://login.microsoftonline.com/common/oauth2/v2.0/authorize?
+	<header role="banner" aria-label="Main Header">
+		<div class="topbar">
+			<a href="week2.html"><div class="box">Home Page</div></a>
+			
+			<a href="https://login.microsoftonline.com/common/oauth2/v2.0/authorize?
 client_id=YOUR_CLIENT_ID
 &response_type=token
 &redirect_uri=https://damien83mancheste.github.io/iFixLangley/week3.html
 &scope=openid profile email
-&response_mode=fragment" class="box">Microsoft Login</a>
-        </div>
-    </header>
+&response_mode=fragment"><div class="box">Microsoft Login</div>
 
+			</a>
+
+			
+			
+			
+			
+		</div>
+	</header>
+
+
+</main>
     <footer role="contentinfo" aria-label="Footer Section">
         <p>🔬 iFixLangley.</p>
-    </footer>
+	</footer>	
+		
+<!-- This is a code I took from AXE website when I was researching for open source methodes that allows me to check website accessibility -->		
+		
+					
+					
+<div id="axeResultsModal" style="display:none; position:fixed; top:10%; left:10%; width:80%; height:80%; background-color:white; border:1px solid black; padding:20px; overflow:auto;">
+  <h2>Accessibility Issues</h2>
+  <pre id="axeResults"></pre>
+  <button onclick="document.getElementById('axeResultsModal').style.display='none'">Close</button>
+</div>
 
-    <div id="axeResultsModal" style="display:none; position:fixed; top:10%; left:10%; width:80%; height:80%; background-color:white; border:1px solid black; padding:20px; overflow:auto;">
-        <h2>Accessibility Issues</h2>
-        <pre id="axeResults"></pre>
-        <button onclick="document.getElementById('axeResultsModal').style.display='none'">Close</button>
-    </div>
-
-    <script>
-        document.getElementById("runAxeTest")?.addEventListener("click", function() {
-            axe.run(function (err, results) {
-                if (err) {
-                    console.error("Error running axe-core:", err);
-                } else {
-                    let issues = results.violations.map(v => `${v.id}: ${v.description}`).join("\n");
-                    document.getElementById("axeResults").textContent = issues;
-                    document.getElementById('axeResultsModal').style.display = 'block';
-                }
-            });
-        });
-    </script>
-</body>
+<script>
+document.getElementById("runAxeTest").addEventListener("click", function() {
+  axe.run(function (err, results) {
+    if (err) {
+      console.error("Error running axe-core:", err);
+    } else {
+      let issues = results.violations.map(v => `${v.id}: ${v.description}`).join("\n");
+      document.getElementById("axeResults").textContent = issues;
+      document.getElementById('axeResultsModal').style.display = 'block';
+    }
+  });
+});
+</script>
 </html>
